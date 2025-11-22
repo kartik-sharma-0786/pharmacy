@@ -17,7 +17,7 @@ const credentials = {
     password: password
 };
 
-const serverUrl = 'http://localhost:3000/login';
+const serverUrl = 'https://pharmacy-3exm.onrender.com/login';
 
 axios.post(serverUrl, credentials)
 .then(response => {

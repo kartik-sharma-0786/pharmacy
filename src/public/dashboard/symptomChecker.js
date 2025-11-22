@@ -39,7 +39,7 @@ checkSymptoms.addEventListener('click', () => {
 function selectionProcess(result) {
 
     let selectedId = null;
-    const endpoint = 'http://localhost:3000/admin/getdis';
+    const endpoint = 'https://pharmacy-3exm.onrender.com/admin/getdis';
     const checkOptions = document.querySelectorAll('input[type="checkbox"][name="symptoms"]');
     console.log(checkOptions);
     result.symptoms = [];

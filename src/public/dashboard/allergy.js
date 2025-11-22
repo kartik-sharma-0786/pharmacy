@@ -36,7 +36,7 @@ patientAllergies.addEventListener('click', () => {
       pass: allergy_name
     }
 
-    axios.post('http://localhost:3000/dashboard/allergies/update', t)
+    axios.post('https://pharmacy-3exm.onrender.com/dashboard/allergies/update', t)
       .then(response => {
         console.log(response);
 				display_allergy();
@@ -60,7 +60,7 @@ close.onclick = function () {
 
 
 function display_allergy() {
-  axios.get('http://localhost:3000/dashboard/allergies')
+  axios.get('https://pharmacy-3exm.onrender.com/dashboard/allergies')
     .then(response => {
       console.log(response);
       if (response.data == "") {
@@ -97,7 +97,7 @@ function display_allergy() {
               pass: data,
             }
             console.log(t.pass);
-            axios.post('http://localhost:3000/dashboard/allergies/delete', t)
+            axios.post('https://pharmacy-3exm.onrender.com/dashboard/allergies/delete', t)
               .then(response => {
                 //console.log(response);
                 display_allergy();

@@ -43,7 +43,7 @@ submitButton.addEventListener('click', function(event) {
   }
   console.log(history.diseases);
   // the array sent contains the disease and duration of each entry and does not append each and every entry
-  axios.post('http://localhost:3000/dashboard/patientHistory/update' ,r )
+  axios.post('https://pharmacy-3exm.onrender.com/dashboard/patientHistory/update' ,r )
     .then(response => {
       console.log(response);
 			showHistory();
@@ -61,7 +61,7 @@ closeButton.addEventListener('click', () => {
 });
 
 function showHistory() {
-    axios.get('http://localhost:3000/dashboard/patientHistory')
+    axios.get('https://pharmacy-3exm.onrender.com/dashboard/patientHistory')
         .then(response => {
             console.log(response);
             if (response.data == "") {
@@ -98,7 +98,7 @@ function showHistory() {
                             pass: data,
                         }
                         console.log(t.pass);
-                        axios.post('http://localhost:3000/dashboard/patientHistory/delete', t)
+                        axios.post('https://pharmacy-3exm.onrender.com/dashboard/patientHistory/delete', t)
                             .then(response => {
                                 console.log(response);
                                 showHistory();

@@ -147,7 +147,7 @@ async function handleClassificationEntry() {
         }    
         await renderSignsInput(question.value , classifyObj);
     }
-    axios.post('http://localhost:3000/Admin/addis' , result)
+    axios.post('https://pharmacy-3exm.onrender.com/Admin/addis' , result)
         .then(response => {
             console.log(response);
         })

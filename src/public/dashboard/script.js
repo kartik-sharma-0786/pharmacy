@@ -58,7 +58,7 @@ appointmentScheduler.addEventListener("click", () => {
 
 logout.addEventListener("click", () => {
   axios
-    .get("http://localhost:3000/logout")
+    .get("https://pharmacy-3exm.onrender.com/logout")
     .then((response) => {
       window.location.href = "/";
     })

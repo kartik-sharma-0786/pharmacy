@@ -54,7 +54,7 @@ currentMedication.addEventListener('click', () => {
 
         console.log(r);
         // the array sent contains the disease and duration of each entry and does not append each and every entry
-        axios.post('http://localhost:3000/dashboard/currentMedication/update', r)
+        axios.post('https://pharmacy-3exm.onrender.com/dashboard/currentMedication/update', r)
             .then(response => {
                 console.log(response);
                 getData();
@@ -77,7 +77,7 @@ currentMedication.addEventListener('click', () => {
 });
 
 function getData() {
-    axios.get('http://localhost:3000/dashboard/currentMedication')
+    axios.get('https://pharmacy-3exm.onrender.com/dashboard/currentMedication')
         .then(response => {
             console.log(response);
             if (response.data == "") {
@@ -113,7 +113,7 @@ function getData() {
                             pass: data,
                         }
                         console.log(t.pass);
-                        axios.post('http://localhost:3000/dashboard/currentMedication/delete', t)
+                        axios.post('https://pharmacy-3exm.onrender.com/dashboard/currentMedication/delete', t)
                             .then(response => {
                                 console.log(response);
                                 //getData();

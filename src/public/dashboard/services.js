@@ -36,7 +36,7 @@ checkSymptoms.addEventListener('click', () => {
 
 
     //selection process exits when the option selected is none
-    // axios.post('http://localhost:3000/dashboard/symptoms', result)
+    // axios.post('https://pharmacy-3exm.onrender.com/dashboard/symptoms', result)
     // 	.then(response => { })
     // 	.catch(error => {
     // 		console.log(error);
@@ -83,7 +83,7 @@ function selectionProcess(result) {
 
     }
     let selectedId = null;
-    const endpoint = 'http://localhost:3000/dashboard/symptoms';
+    const endpoint = 'https://pharmacy-3exm.onrender.com/dashboard/symptoms';
     const checkOptions = document.querySelectorAll('input[type="checkbox"][name="symptoms"]');
 
 

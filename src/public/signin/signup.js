@@ -16,7 +16,7 @@ submit.addEventListener('click' , function(event)
 
 const credentials = userData;
 
-const serverUrl = 'http://localhost:3000/create';
+const serverUrl = 'https://pharmacy-3exm.onrender.com/create';
 
 console.log(userData);
 
