@@ -1,21 +1,23 @@
 require("dotenv").config();
-const mongoose= require('mongoose');//mongodb 
-const MONGO_URL= process.env.MONGO_URL;
-// adding event listeners
-mongoose.connection.once('open',()=>{
-    console.log('mongodb connection ready');
+const mongoose = require("mongoose");
+
+const MONGO_URL = process.env.MONGO_URL;
+
+// Event listeners
+mongoose.connection.once("open", () => {
+  console.log("MongoDB connection ready");
 });
-mongoose.connection.on('error',(err)=>{ 
-    console.error(err);
+
+mongoose.connection.on("error", (err) => {
+  console.error("MongoDB error:", err);
 });
-const options = {
-    useNewUrlParser: true,
-  };
 
 async function mongoConnect() {
-    mongoose.connect(MONGO_URL,options);
+  await mongoose.connect(MONGO_URL, {
+    useNewUrlParser: true,
+  });
 }
 
 module.exports = {
-    mongoConnect,
+  mongoConnect,
 };
